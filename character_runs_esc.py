@@ -1,9 +1,16 @@
 from pico2d import *
+
+
 def handle_events():
     global running, dx, dy
+    global x, y
     events = get_events()
     for e in events:
-        if e.type == SDL_KEYDOWN:
+        if e.type==SDL_QUIT:
+            running = False
+        elif e.type == SDL_MOUSEMOTION:
+            x, y=e.x, get_canvas_height() - e.y
+        elif e.type == SDL_KEYDOWN:
             if e.key == SDLK_ESCAPE:
                 running = False
             elif e.key == SDLK_UP:
