@@ -31,6 +31,7 @@ class Boy:
         ball = Ball(self.x, self.y, speed)
         game_world.add_object(ball, game_world.layer_obstacle)
 
+
 class Ball:
     image=None
     def __init__(self, x, y, speed):
@@ -40,6 +41,9 @@ class Ball:
             Ball.image=load_image('ball21x21.png')
     def update(self):
         self.x += self.speed
+        if self.x > get_canvas_width() + 50 or self.x < -50:
+            game_world.remove_object(self)
+            # del(self)
     def draw(self):
         Ball.image.draw(self.x, self.y)
 
