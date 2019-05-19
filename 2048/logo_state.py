@@ -13,7 +13,10 @@ def exit():
     pass
 
 def update():
-	pass
+    elapsed=get_time()-startedOn
+    # 1.0초 넘어가면 game_state로
+    if elapsed>1.0:
+        game_framework.change_state(game_state)
 
 def draw():
     global verdana
