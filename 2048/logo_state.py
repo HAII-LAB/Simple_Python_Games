@@ -4,6 +4,9 @@ import game_framework
 import font
 import game_state
 
+verdana=None
+startedOn=0.0
+
 def enter():
     global verdana
     verdana=font.load('verdana.ttf', 50)
