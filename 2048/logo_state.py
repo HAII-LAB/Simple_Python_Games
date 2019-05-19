@@ -5,7 +5,9 @@ import font
 import game_state
 
 def enter():
-	pass
+    global verdana
+    verdana=font.load('verdana.ttf', 50)
+    startedOn=get_time()
 
 def exit():
     pass
@@ -14,6 +16,10 @@ def update():
 	pass
 
 def draw():
+    global verdana
+    clear_canvas()
+    verdana.draw(100, 300, 'Game 2048 Logo', (0,0,0))
+    update_canvas()
     pass
 
 def handle_evets():
