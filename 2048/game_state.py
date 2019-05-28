@@ -15,6 +15,19 @@ class Block:
         if self.value > 0:
             self.font.draw(self.x, self.y, '%d' % self.value, color)
 
+# 블럭 16개를 관리하는 클래스(16개의 블럭을 리스트에 저장)
+class Board:
+    def __init__(self):
+        self.blocks[]
+        for y in range(4):
+            for x in range(4):
+                bx=100*x+100
+                by=100*y+100
+                b=Block(bx,by)
+                # 랜덤한 블럭
+                # b.value=random.randint(10,20)
+                self.blocks.append(b)
+
 def enter():
     pass
 
