@@ -48,6 +48,11 @@ class Board:
         # 블럭 설정
         self.blocks[index].value=value
         return True
+    def valueAt(self, x, y):
+        return self.blocks[y*4+x].value
+    def setValue(self, x, y, v):
+        # 왼쪽부터 오다가 숫자 만나면 왼쪽으로 당겨 붙이기
+        self.blocks[y*4+x].value=v
 
 def enter():
     pass
