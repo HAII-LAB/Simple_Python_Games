@@ -72,6 +72,7 @@ def handle_events():
         # 게임 닫는 코드(Esc, 창닫기)
         if e.type==SDL_QUIT:
             game_framework.quit()
+        elif e.type==SDL_KEYDOWN:
 
 if __name__ == '__main__' :
     import sys
