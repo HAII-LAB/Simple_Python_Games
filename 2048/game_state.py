@@ -30,6 +30,11 @@ class Board:
     def draw(self):
         for b in self.blocks:
             b.draw()
+    def isFull(self):
+        for b in self.blocks:
+            if b.value==0:
+                return False
+        return True
 
 def enter():
     pass
