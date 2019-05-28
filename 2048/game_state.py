@@ -27,6 +27,9 @@ class Board:
                 # 랜덤한 블럭
                 # b.value=random.randint(10,20)
                 self.blocks.append(b)
+    def draw(self):
+        for b in self.blocks:
+            b.draw()
 
 def enter():
     pass
