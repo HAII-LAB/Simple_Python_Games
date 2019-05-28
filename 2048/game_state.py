@@ -73,6 +73,8 @@ def handle_events():
         if e.type==SDL_QUIT:
             game_framework.quit()
         elif e.type==SDL_KEYDOWN:
+            if e.key==SDLK_ESCAPE:
+                game_framework.quit()
 
 if __name__ == '__main__' :
     import sys
