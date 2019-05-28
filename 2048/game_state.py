@@ -75,6 +75,8 @@ def handle_events():
         elif e.type==SDL_KEYDOWN:
             if e.key==SDLK_ESCAPE:
                 game_framework.quit()
+            elif e.key==SDLK_SPACE:
+                created=board.createNew()
 
 if __name__ == '__main__' :
     import sys
