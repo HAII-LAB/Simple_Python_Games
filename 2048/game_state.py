@@ -64,7 +64,11 @@ def update():
     pass
 
 def draw():
-	pass
+	# 화면에 그리기
+    clear_canvas()
+    verdana.draw(500, 500, 'Game 2048', (0,0,0))
+    board.draw()
+    update_canvas()
 
 def handle_events():
     events = get_events()
