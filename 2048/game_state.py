@@ -35,6 +35,19 @@ class Board:
             if b.value==0:
                 return False
         return True
+    def createNew(self):
+        # 숫자를 다 채우면 더 이상 채우지 않기 (무한루프 방지)
+        if self.isFull():
+            return False
+        while True:
+            index=random.randint(0,15)
+            print('Index is ', index)
+            if self.blocks[index].value==0:
+                break
+        value= 2 if random.randint(0,1)==0 else 4
+        # 블럭 설정
+        self.blocks[index].value=value
+        return True
 
 def enter():
     pass
